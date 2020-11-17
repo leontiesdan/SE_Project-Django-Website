@@ -1,0 +1,23 @@
+li a {
+	color: red;
+	font-size:3em;
+}
+
+body {
+    background-size:50px 50px;
+    background-image: url("images/stripe2.png");
+    background-repeat: repeat;
+    background-blend-mode:lighten ;
+}
+
+h1{
+	font-weight: 900;
+	color: crimson;
+}
+input{
+}
+label{
+	color: crimson;
+	cursor: pointer;
+	font-size:2em;
+}

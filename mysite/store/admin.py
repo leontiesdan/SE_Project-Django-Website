@@ -5,9 +5,10 @@ from .models import Genre, Band, Album, Order, AlbumInstance
 
 class AlbumAdmin(admin.ModelAdmin):
 	list_display = ('name', 'cover', 'display_price', 'description', 'display_genre', 'band')
+	prepopulated_fields = {'slug': ('name',)} # new	
 
 class OrderAdmin(admin.ModelAdmin):
-	list_display = ('date', 'get_total')
+	list_display = ('date', 'get_total', 'get_items')
 
 
 admin.site.register(Album, AlbumAdmin)

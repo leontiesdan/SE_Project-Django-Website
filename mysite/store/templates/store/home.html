@@ -1,0 +1,24 @@
+{% load static %}
+<html>
+<head>
+	<title>eAlbum</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'store/css/home.css' %}">
+</head>
+<body>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<ul id="topbar">
+    <li><a class='link' href="{% url 'store:home' %}">Home</a></li>
+    <li><a class='link' href="{% url 'store:albums' %}">Albums</a></li>
+	<li class="image"></li>
+</ul>
+
+<div id = "logo" class = "image"></div>
+
+<div id = "slogan">-the online album shopping experience-</div> 
+
+<div id = "description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultrices massa in magna fermentum ullamcorper. Donec faucibus aliquam est vitae tincidunt. Suspendisse mattis massa vitae quam viverra venenatis eu et arcu. Nunc et hendrerit magna, lobortis eleifend sapien. Vivamus sollicitudin magna eget metus condimentum, eget condimentum purus condimentum. Nulla nibh magna, rutrum eget odio ut, tempus vulputate nibh. Vestibulum id sapien nec magna scelerisque feugiat. </div>
+
+<div id = "browse"><a href="{% url 'store:albums' %}">Browse our albums</a></div>
+
+</body>

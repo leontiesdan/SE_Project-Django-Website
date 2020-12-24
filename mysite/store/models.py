@@ -15,11 +15,14 @@ class Band(models.Model):
 
 class Album(models.Model):
 	name = models.CharField(max_length=100)
-	cover = models.ImageField()
+	cover = models.ImageField(upload_to='store/static/store/images')
 	price = models.PositiveIntegerField(default = 0)
 	description = models.CharField(max_length=400)
 	genre = models.ManyToManyField(Genre)
 	band = models.ForeignKey(Band, on_delete=models.CASCADE)
+	slug = models.SlugField(max_length = 250, unique=True) 
+	def get_local_url(self):
+		return self.cover.url.rsplit('/', 1)[1]
 	def display_price(self):
 		return str(self.price) + " €"
 	def display_genre(self):
@@ -44,6 +47,6 @@ class Order(models.Model):
 			total += Album.objects.get(name=instance.album).price
 		return total
 	def get_items(self):
-		return AlbumInstance.objects.filter(id = self.id)
+		return [str(x) for x in AlbumInstance.objects.filter(order_id = self.id)]
 	def __str__(self):
 		return str(self.id)

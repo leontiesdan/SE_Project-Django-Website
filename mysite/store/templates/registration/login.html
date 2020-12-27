@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>eAlbum</title>
-    <link type="text/css" rel="stylesheet" href="{% static 'store/css/albums.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'store/css/login.css' %}">
 </head>
 <body>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -17,13 +17,13 @@
     {% endif %}
 	<li class="image"></li>
 </ul>
-
-{% for album in albums_all %}
-    <div class = "album_container">
-    	<a href="{% url 'store:detail' album.slug %}"><div class = "image album_image" style="background-image:url(/static/store/images/{{album.get_local_url}})"></div></a>
-    	<div class = "album_name"><a href="{% url 'store:detail' album.slug %}">{{album.name}}</a></div>
-    	<div class = "album_price">{{album.price}}$</div>
-    </div>
-{% endfor %}
-
+<div id="login_cont">
+	<div id="login">Log In</div>
+	<form method="post">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<button type="submit">Log In</button>
+	</form>
+	<div id="no_account"><a href="{% url 'store:signup' %}">No account? Sign up here</a></div>
+</div>
 </body>

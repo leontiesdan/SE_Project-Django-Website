@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 import uuid
 # Create your models here.
 
@@ -38,9 +39,16 @@ class AlbumInstance(models.Model):
 	def __str__(self):
 		return self.album.name
 
+class Profile(models.Model):
+	user = models.OneToOneField(User, on_delete = models.SET_NULL, null = True)
+	balance = models.FloatField(default=0)
+	def __str__(self):
+		return str(self.user.username)
+
 class Order(models.Model):
 	uuid = models.UUIDField(unique=True, default=uuid.uuid4, help_text='Unique ID for this order instance')
 	date = models.DateTimeField('date ordered')
+	buyer = models.ForeignKey(Profile, on_delete = models.SET_NULL, null = True)
 	def get_total(self):
 		total = 0
 		for instance in AlbumInstance.objects.filter(order_id = self.id):
@@ -49,4 +57,6 @@ class Order(models.Model):
 	def get_items(self):
 		return [str(x) for x in AlbumInstance.objects.filter(order_id = self.id)]
 	def __str__(self):
-		return str(self.id)
+		return str(self.uuid)
+
+

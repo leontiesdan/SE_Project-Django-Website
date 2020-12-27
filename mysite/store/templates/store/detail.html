@@ -10,6 +10,11 @@
 <ul id="topbar">
     <li><a class='link' href="{% url 'store:home' %}">Home</a></li>
     <li><a class='link' href="{% url 'store:albums' %}">Albums</a></li>
+    {% if user.is_authenticated %}
+        <li><a class='link' href="{% url 'store:logout' %}">Log Out</a></li>
+    {% else %}
+        <li><a class='link' href="{% url 'store:login' %}">Log In</a></li>
+    {% endif %}
 	<li class="image"></li>
 </ul>
 
@@ -23,7 +28,7 @@
     <div class = "album_band">Band: {{album.band.name}}</div>
     <div class = "album_genre">Genre: {% for genre in album.genre.all %} {{genre.name}}{% endfor %}</div>
     <div class = "album_description">{{album.description}}</div>
-    <button type="button" class = "album_buy">pls buy</button>
+    <button type="button" class = "album_buy">Buy</button>
 </div>
 
 </body>

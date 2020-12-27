@@ -37,7 +37,7 @@ body{
     src:url(../fonts/BebasNeue-Regular.woff)
 }
 
-ul{ position:fixed;
+#topbar{ position:fixed;
     width:100%;
     background:#65000B;
     margin: 0;
@@ -51,7 +51,7 @@ ul{ position:fixed;
     display:block;
 }
 
-li{ padding-top:5px;
+#topbar li{ padding-top:5px;
     padding-bottom:5px;
     padding-left:20px;
     padding-right:20px;
@@ -64,11 +64,11 @@ li{ padding-top:5px;
     font-size: 7vh;
 }
 
-li:first-child{
+#topbar li:first-child{
     background-color:black;
     color: black;
 }
-li:last-child{
+#topbar li:last-child{
     background-image: url(../images/logo.png);
     background-color:rgba(0,0,0,0);
     vertical-align: middle;
@@ -77,7 +77,7 @@ li:last-child{
     float:right;
     margin-right: 25px;
 }
-li:hover{
+#topbar li:hover{
     background-color:#980011;
     cursor:pointer;
     color:black;
@@ -113,44 +113,56 @@ a{
     background-image: url(../images/logo.png);
     background-color: rgba(0,0,0,0);
 }
-#slogan{
-    position: relative;
-    vertical-align: middle;
-    margin:0 auto;
-    margin-top:5vh;
-    width:100vw;
-    height: 7vh;
-    font-size:7vh;
-    font-family: bebasbold;
-    color:white;
-    text-align: center;
-    text-shadow:0px 0px 3px black;
+
+
+#login{
+	display:block;
+	font-family: bebasbold;
+	color: white;
+	font-size: 20vh;
 }
-#description{
-    position: relative;
-    vertical-align: middle;
-    margin:0vh auto;
-    margin-top:5vh;
-    width:60vw;
-    height: auto;
-    font-size:3vh;
-    font-family: museo500;
-    color:white;
-    text-align: center;
-    text-shadow:0px 0px 5px black;    
+#no_account{
+	display:block;
+	font-family: museo;
+	color: white;
+	font-size: 3vh;
+
 }
-#browse{
-    position: relative;
-    vertical-align: middle;
-    margin:0vh auto;
-    width:20vw;
-    font-size:7vh;
-    font-family: bebasregular;
-    color:white;
-    background-color: #65000B;
-    text-align: center;
-    text-shadow:0px 0px 5px black;  
-    box-shadow:0px 0px 5px red;  
-    margin-top:5vh;
+#login_cont{
+	margin-top:20vh;
+	margin-left:auto;
+	vertical-align: middle;
+	text-align: center;
+	text-shadow:0px 0px 3px black;
+}
+form{
+	font-family:museo;
+	color:white;
+	font-weight: 900;
+	font-size:5vh;
+	vertical-align: middle;
+}
+button{
+	font-family: museo;
+	font-weight: 900;
+	font-size:5vh;
+	box-shadow:0px 0px 5px black;
+}
+input{
+	font-family:museo;
+	color:black;
+	font-weight: 900;
+	font-size:5vh;
+	vertical-align: middle;
+}
+li{
+	font-size:2vh;
+}
+#signup_cont{
+	margin-top:10vh;
+	margin-left: 20vw;
+	vertical-align: middle;
+	text-shadow:0px 0px 3px black;
+	width:60vw;
 
 }

@@ -12,6 +12,7 @@
     <li><a class='link' href="{% url 'store:albums' %}">Albums</a></li>
     {% if user.is_authenticated %}
         <li><a class='link' href="{% url 'store:logout' %}">Log Out</a></li>
+        <li><a class='link' href="{% url 'store:cart' %}">Cart</a></li>
     {% else %}
         <li><a class='link' href="{% url 'store:login' %}">Log In</a></li>
     {% endif %}

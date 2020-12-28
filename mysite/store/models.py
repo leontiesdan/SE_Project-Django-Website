@@ -22,6 +22,7 @@ class Album(models.Model):
 	genre = models.ManyToManyField(Genre)
 	band = models.ForeignKey(Band, on_delete=models.CASCADE)
 	slug = models.SlugField(max_length = 250, unique=True) 
+
 	def get_local_url(self):
 		return self.cover.url.rsplit('/', 1)[1]
 	def display_price(self):
@@ -42,6 +43,8 @@ class AlbumInstance(models.Model):
 class Profile(models.Model):
 	user = models.OneToOneField(User, on_delete = models.SET_NULL, null = True)
 	balance = models.FloatField(default=0)
+	cartAlbums = models.ManyToManyField(Album, null = True, blank=True)
+
 	def __str__(self):
 		return str(self.user.username)
 

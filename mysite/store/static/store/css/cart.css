@@ -102,64 +102,82 @@ a{
     background-repeat:no-repeat;
     background-position:center;
 }
-.album_container{
-    margin-top:15vh;
-    margin-left:10vw;
-    position:relative;
-    vertical-align: middle;
-    display:inline-block;
-    text-align: center;
+#album_container{
+    padding:3vh;
+    display: block;
+    position: relative;
+    margin-top: 20vh;
+    margin-left:20vw;
+    width: 60vw;
+    overflow: auto;
+    height: 50vh;
     background-color:rgba(0,0,0,0.5);
     box-shadow:0px 0px 5px black;
-    width:33vw;
 }
-.album_image{
-    width:33vw;
-    height:50vh;
-    background-color:rgba(0,0,0,0);
-    text-align: center;
-    margin:0 auto;
+.item_cont{
+    width:60vw;
+    display:block;
+    position:relative;
+    margin-top:1vh;
+    background-color:rgba(255,255,255,0.1);
+    height: 5vh;
+    padding: 1vh;
+    border-radius:1vh;
 }
-.album_name{
-    font-family: geometria;
-    color: white;
-    font-size: 10vh;
-}
-.album_price{
-    font-family: geometria;
-    font-size:10vh;
+.item_name{
+    display:inline-block;
+    font-size:5vh;
     color:white;
-    padding-bottom:1vh;
-}
-.album_band{
-    font-family: bebasbold;
-    font-size:10vh;
-    color:white;
-    padding-bottom:1vh;
-}
-.album_genre{
-    font-family: bebasbold;
-    font-size:10vh;
-    color:white;
-    padding-bottom:1vh;
-}
-.album_description{
-    font-family: geometria;
-    color: white;
-    font-size: 3vh;
-}
-.album_buy{
-    position: relative;
+    font-family: museo;
+    height: 5vh;
     vertical-align: middle;
-    margin:0vh auto;
-    width:20vw;
-    font-size:7vh;
-    font-family: bebasregular;
+
+}
+.item_price{
+    display:inline-block;
+    font-family: museo;
     color:white;
-    background-color: #65000B;
+    font-size:5vh;
+    height: 5vh;
+    margin-right:1vh;
+    vertical-align: middle;
+}
+.item_delete{
+    display:inline-block;
+    font-family: museo;
+    color:black;
+    font-size:4vh;   
+    height: 5vh;
+    vertical-align: middle;
+    background-color:white;
+    border-radius:1vh;
+    cursor:pointer;
+}
+#add_item{
+    float: right;
+    display:inline-block;
+    font-family: museo;
+    color:black;
+    vertical-align: middle;
+}
+#buy_container{
+    position: relative;
+    display: block;
+    vertical-align: middle;
+    margin-left: auto;
     text-align: center;
-    text-shadow:0px 0px 5px black;  
-    box-shadow:0px 0px 5px red;  
+    width:auto;
     margin-top:5vh;
-    cursor: pointer;
+}
+.purchase{
+    display:inline-block;
+    font-family: geometria;
+    color:black;
+    font-size:10vh;   
+    height: 13vh;
+    vertical-align: middle;
+    background-color:white;
+    border-radius:1vh;
+    cursor:pointer;
+    box-shadow: 0px 0px 3px crimson;
 }

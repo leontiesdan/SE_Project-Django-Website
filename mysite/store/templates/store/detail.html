@@ -1,0 +1,37 @@
+{% load static %}
+<html>
+<head>
+	<title>eAlbum</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'store/css/detail.css' %}">
+</head>
+<body>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<ul id="topbar">
+    <li><a class='link' href="{% url 'store:home' %}">Home</a></li>
+    <li><a class='link' href="{% url 'store:albums' %}">Albums</a></li>
+    {% if user.is_authenticated %}
+        <li><a class='link' href="{% url 'store:logout' %}">Log Out</a></li>
+        <li><a class='link' href="{% url 'store:cart' %}">Cart</a></li>
+    {% else %}
+        <li><a class='link' href="{% url 'store:login' %}">Log In</a></li>
+    {% endif %}
+	<li class="image"></li>
+</ul>
+
+<div class = "album_container">
+	<div class = "image album_image" style="background-image:url(/static/store/images/{{album.get_local_url}})"></div>
+	<div class = "album_name">{{album.name}}</div>
+	<div class = "album_price">Price: {{album.price}}€</div>
+</div>
+
+<div class = "album_container">
+    <div class = "album_band">Band: {{album.band.name}}</div>
+    <div class = "album_genre">Genre: {% for genre in album.genre.all %} {{genre.name}}{% endfor %}</div>
+    <div class = "album_description">{{album.description}}</div>
+    <form method="get">
+    <button type="submit" value="{{album.slug}}" class = "album_buy">Add to cart</button>
+    </form>
+</div>
+
+</body>

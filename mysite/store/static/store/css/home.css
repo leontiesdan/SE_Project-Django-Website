@@ -1,0 +1,156 @@
+body{
+    margin:0 auto;
+    background-image:url(../images/home_bg.png);
+    background-size:cover;
+    background-repeat:repeat-y;
+    background-attachment: fixed;
+    background-color: rgba(0,0,0,0.8);
+    overflow-x: hidden;
+    transform:translate3d(0%);
+}
+@font-face{
+    font-family:geometria;
+    src:url(../fonts/geometria.woff)
+}
+@font-face{
+    font-family:museo;
+    src:url(../fonts/museo500.woff)
+}
+@font-face{
+    font-family:bebasthin;
+    src:url(../fonts/BebasNeue-Thin.woff)
+}
+@font-face{
+    font-family:bebasbook;
+    src:url(../fonts/BebasNeue-Book.woff)
+}
+@font-face{
+    font-family:bebasbold;
+    src:url(../fonts/BebasNeue-Bold.woff)
+}
+@font-face{
+    font-family:bebaslight;
+    src:url(../fonts/BebasNeue-Light.woff)
+}
+@font-face{
+    font-family:bebasregular;
+    src:url(../fonts/BebasNeue-Regular.woff)
+}
+
+ul{ position:fixed;
+    width:100%;
+    background:#65000B;
+    margin: 0;
+    padding: 0;
+    top:0;
+    font-family:bebasregular;
+    box-shadow:0 0px 13px black;
+    white-space: nowrap;    
+    border-bottom:3px solid black;
+    opacity:1;
+    display:block;
+}
+
+li{ padding-top:5px;
+    padding-bottom:5px;
+    padding-left:20px;
+    padding-right:20px;
+    display: inline-block;
+    text-align: center;
+    color:white;
+    transition:0.3s;
+    float:left;
+    background-color:black;
+    font-size: 7vh;
+}
+
+li:first-child{
+    background-color:black;
+    color: black;
+}
+li:last-child{
+    background-image: url(../images/logo.png);
+    background-color:rgba(0,0,0,0);
+    vertical-align: middle;
+    width: 10vw;
+    height: 7vh;
+    float:right;
+    margin-right: 25px;
+}
+li:hover{
+    background-color:#980011;
+    cursor:pointer;
+    color:black;
+}
+.link{
+    text-decoration: none;
+    color:white;
+    transition:0.3s;
+}
+.link:hover{
+    color:black;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+.image{
+    position:relative;
+    background-color:rgba(0,0,0,0.5);
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+#logo{
+    position: relative;
+    vertical-align: middle;
+    margin: 0 auto;
+    margin-top:15vh;    
+    width: 50vw;
+    height: 20vh;
+    background-image: url(../images/logo.png);
+    background-color: rgba(0,0,0,0);
+}
+#slogan{
+    position: relative;
+    vertical-align: middle;
+    margin:0 auto;
+    margin-top:5vh;
+    width:100vw;
+    height: 7vh;
+    font-size:7vh;
+    font-family: bebasbold;
+    color:white;
+    text-align: center;
+    text-shadow:0px 0px 3px black;
+}
+#description{
+    position: relative;
+    vertical-align: middle;
+    margin:0vh auto;
+    margin-top:5vh;
+    width:60vw;
+    height: auto;
+    font-size:3vh;
+    font-family: museo500;
+    color:white;
+    text-align: center;
+    text-shadow:0px 0px 5px black;    
+}
+#browse{
+    position: relative;
+    vertical-align: middle;
+    margin:0vh auto;
+    width:20vw;
+    font-size:7vh;
+    font-family: bebasregular;
+    color:white;
+    background-color: #65000B;
+    text-align: center;
+    text-shadow:0px 0px 5px black;  
+    box-shadow:0px 0px 5px red;  
+    margin-top:5vh;
+
+}

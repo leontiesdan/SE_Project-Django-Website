@@ -1,0 +1,30 @@
+{% load static %}
+<html>
+<head>
+	<title>eAlbum</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'store/css/albums.css' %}">
+</head>
+<body>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<ul id="topbar">
+    <li><a class='link' href="{% url 'store:home' %}">Home</a></li>
+    <li><a class='link' href="{% url 'store:albums' %}">Albums</a></li>
+    {% if user.is_authenticated %}
+        <li><a class='link' href="{% url 'store:logout' %}">Log Out</a></li>
+        <li><a class='link' href="{% url 'store:cart' %}">Cart</a></li>
+    {% else %}
+        <li><a class='link' href="{% url 'store:login' %}">Log In</a></li>
+    {% endif %}
+	<li class="image"></li>
+</ul>
+
+{% for album in albums_all %}
+    <div class = "album_container">
+    	<a href="{% url 'store:detail' album.slug %}"><div class = "image album_image" style="background-image:url(/static/store/images/{{album.get_local_url}})"></div></a>
+    	<div class = "album_name"><a href="{% url 'store:detail' album.slug %}">{{album.name}}</a></div>
+    	<div class = "album_price">{{album.price}}€</div>
+    </div>
+{% endfor %}
+
+</body>

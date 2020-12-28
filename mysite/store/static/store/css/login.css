@@ -1,0 +1,168 @@
+body{
+    margin:0 auto;
+    background-image:url(../images/home_bg.png);
+    background-size:cover;
+    background-repeat:repeat-y;
+    background-attachment: fixed;
+    background-color: rgba(0,0,0,0.8);
+    overflow-x: hidden;
+    transform:translate3d(0%);
+}
+@font-face{
+    font-family:geometria;
+    src:url(../fonts/geometria.woff)
+}
+@font-face{
+    font-family:museo;
+    src:url(../fonts/museo500.woff)
+}
+@font-face{
+    font-family:bebasthin;
+    src:url(../fonts/BebasNeue-Thin.woff)
+}
+@font-face{
+    font-family:bebasbook;
+    src:url(../fonts/BebasNeue-Book.woff)
+}
+@font-face{
+    font-family:bebasbold;
+    src:url(../fonts/BebasNeue-Bold.woff)
+}
+@font-face{
+    font-family:bebaslight;
+    src:url(../fonts/BebasNeue-Light.woff)
+}
+@font-face{
+    font-family:bebasregular;
+    src:url(../fonts/BebasNeue-Regular.woff)
+}
+
+#topbar{ position:fixed;
+    width:100%;
+    background:#65000B;
+    margin: 0;
+    padding: 0;
+    top:0;
+    font-family:bebasregular;
+    box-shadow:0 0px 13px black;
+    white-space: nowrap;    
+    border-bottom:3px solid black;
+    opacity:1;
+    display:block;
+}
+
+#topbar li{ padding-top:5px;
+    padding-bottom:5px;
+    padding-left:20px;
+    padding-right:20px;
+    display: inline-block;
+    text-align: center;
+    color:white;
+    transition:0.3s;
+    float:left;
+    background-color:black;
+    font-size: 7vh;
+}
+
+#topbar li:first-child{
+    background-color:black;
+    color: black;
+}
+#topbar li:last-child{
+    background-image: url(../images/logo.png);
+    background-color:rgba(0,0,0,0);
+    vertical-align: middle;
+    width: 10vw;
+    height: 7vh;
+    float:right;
+    margin-right: 25px;
+}
+#topbar li:hover{
+    background-color:#980011;
+    cursor:pointer;
+    color:black;
+}
+.link{
+    text-decoration: none;
+    color:white;
+    transition:0.3s;
+}
+.link:hover{
+    color:black;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+.image{
+    position:relative;
+    background-color:rgba(0,0,0,0.5);
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+#logo{
+    position: relative;
+    vertical-align: middle;
+    margin: 0 auto;
+    margin-top:15vh;    
+    width: 50vw;
+    height: 20vh;
+    background-image: url(../images/logo.png);
+    background-color: rgba(0,0,0,0);
+}
+
+
+#login{
+	display:block;
+	font-family: bebasbold;
+	color: white;
+	font-size: 20vh;
+}
+#no_account{
+	display:block;
+	font-family: museo;
+	color: white;
+	font-size: 3vh;
+
+}
+#login_cont{
+	margin-top:20vh;
+	margin-left:auto;
+	vertical-align: middle;
+	text-align: center;
+	text-shadow:0px 0px 3px black;
+}
+form{
+	font-family:museo;
+	color:white;
+	font-weight: 900;
+	font-size:5vh;
+	vertical-align: middle;
+}
+button{
+	font-family: museo;
+	font-weight: 900;
+	font-size:5vh;
+	box-shadow:0px 0px 5px black;
+}
+input{
+	font-family:museo;
+	color:black;
+	font-weight: 900;
+	font-size:5vh;
+	vertical-align: middle;
+}
+li{
+	font-size:2vh;
+}
+#signup_cont{
+	margin-top:10vh;
+	margin-left: 20vw;
+	vertical-align: middle;
+	text-shadow:0px 0px 3px black;
+	width:60vw;
+
+}
